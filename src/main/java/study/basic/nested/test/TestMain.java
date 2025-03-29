@@ -8,7 +8,12 @@ public class TestMain {
         staticClass.printStatic("LocalClass.hello!!");
         outerClass.new InnerClass().innerPrint();
 
-
+        new PrinterIf(){
+            @Override
+            public void print(){
+                System.out.println("Anonymous.hello!");
+            }
+        }.print();
 
     }
 }
