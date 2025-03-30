@@ -1,5 +1,8 @@
 package study.basic.exception.ex2;
 
+import study.basic.exception.ex2.exception.NetworkConnectExceptionV3;
+import study.basic.exception.ex2.exception.NetworkSendExceptionV3;
+
 public class NetworkClientV3 {
     private final String address;
     public boolean connectError;

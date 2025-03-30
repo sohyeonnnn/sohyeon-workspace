@@ -1,29 +1,29 @@
-package study.basic.exception.ex2;
+package study.basic.exception.ex3;
 
-import study.basic.exception.ex2.exception.NetworkClientExceptionV2;
-import study.basic.exception.ex2.exception.NetworkSendExceptionV3;
+import study.basic.exception.ex3.exception.NetworkConnectExceptionV4;
+import study.basic.exception.ex3.exception.NetworkSendExceptionV4;
 
-public class NetworkClientV2 {
+public class NetworkClientV4 {
     private final String address;
     public boolean connectError;
     public boolean sendError;
 
-    public NetworkClientV2(String address) {
+    public NetworkClientV4(String address) {
         this.address = address;
     }
 
-    public void connect() throws NetworkClientExceptionV2 {
+    public void connect() {
         if (connectError) {
-            throw new NetworkClientExceptionV2("connectError", address+" 서버 연결 실패!");
+            throw new NetworkConnectExceptionV4(address, address+" 서버 연결 실패!");
         }
         //연결성공
         System.out.println(address + " 서버 연결 성공");
     }
 
-    public void send(String data) throws NetworkSendExceptionV3 {
+    public void send(String data){
         if (sendError) {
-            //throw new NetworkSendExceptionV2("sendError", address+" 전송 실패!");
-            throw new RuntimeException("예상치 못한 예외 발생 ! ! ! ");
+            throw new NetworkSendExceptionV4("sendError", address+" 전송 실패!");
+            //throw new RuntimeException("예상치 못한 예외 발생 ! ! ! ");
         }
         //전송성공
         System.out.println(address +" 서버에 데이터 전송 성공 : "+data );

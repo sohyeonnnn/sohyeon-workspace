@@ -1,6 +1,6 @@
-package study.basic.exception.ex2;
+package study.basic.exception.ex2.exception;
 
-public class NetworkConnectExceptionV3 extends NetworkClientExceptionV2{
+public class NetworkConnectExceptionV3 extends NetworkClientExceptionV2 {
     private String address;
     private String message;
 

@@ -1,6 +1,6 @@
-package study.basic.exception.ex2;
+package study.basic.exception.ex2.exception;
 
-public class NetworkSendExceptionV3 extends NetworkClientExceptionV2{
+public class NetworkSendExceptionV3 extends NetworkClientExceptionV2 {
     private String errorCode;
     //private String message;
 

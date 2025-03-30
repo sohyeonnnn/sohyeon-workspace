@@ -1,4 +1,4 @@
-package study.basic.exception.ex2;
+package study.basic.exception.ex2.exception;
 
 public class NetworkClientExceptionV2 extends Exception {
     private String errorCode;
