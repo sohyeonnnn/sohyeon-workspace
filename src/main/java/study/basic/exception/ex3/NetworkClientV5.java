@@ -1,0 +1,49 @@
+package study.basic.exception.ex3;
+
+import study.basic.exception.ex3.exception.NetworkConnectExceptionV4;
+import study.basic.exception.ex3.exception.NetworkSendExceptionV4;
+
+public class NetworkClientV5 implements AutoCloseable {
+    private final String address;
+    public boolean connectError;
+    public boolean sendError;
+
+    public NetworkClientV5(String address) {
+        this.address = address;
+    }
+
+    public void connect() {
+        if (connectError) {
+            throw new NetworkConnectExceptionV4(address, address+" 서버 연결 실패!");
+        }
+        //연결성공
+        System.out.println(address + " 서버 연결 성공");
+    }
+
+    public void send(String data){
+        if (sendError) {
+            throw new NetworkSendExceptionV4("sendError", address+" 전송 실패!");
+            //throw new RuntimeException("예상치 못한 예외 발생 ! ! ! ");
+        }
+        //전송성공
+        System.out.println(address +" 서버에 데이터 전송 성공 : "+data );
+    }
+
+    public void disconnect(){
+        System.out.println(address + " 서버 연결 해제");
+    }
+
+    public void initError(String data){
+        if(data.contains("error1")){
+            connectError = true;
+        }else if(data.contains("error2")){
+            sendError = true;
+        }
+    }
+
+    @Override
+    public void close() {
+        System.out.println("client.close");
+        disconnect();
+    }
+}

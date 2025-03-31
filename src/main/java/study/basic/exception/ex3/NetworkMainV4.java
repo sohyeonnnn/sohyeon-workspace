@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class NetworkMainV4 {
     public static void main(String[] args) {
-        NetworkServiceV4 networkService = new NetworkServiceV4();
+        //NetworkServiceV4 networkService = new NetworkServiceV4();
+        NetworkServiceV5 networkService = new NetworkServiceV5();
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -31,9 +32,9 @@ public class NetworkMainV4 {
         e.printStackTrace(System.out); // 에러내용 출력
         //e.printStackTrace();
 
-        //필요한경우 예외별로 별도의 추가 처리 간으
-        if(e instanceof NetworkSendExceptionV4 sendException4) {
+        //필요한경우 예외별로 별도의 추가 처리 가능
+        /*if(e instanceof NetworkSendExceptionV4 sendException4) {
             System.out.println("[전송오류] 데이터 : "+sendException4.getSendData());
-        }
+        }*/
     }
 }
