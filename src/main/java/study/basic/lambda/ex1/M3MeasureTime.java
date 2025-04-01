@@ -1,9 +1,6 @@
 package study.basic.lambda.ex1;
 
-import study.basic.lambda.Procedure;
-
 import java.util.Arrays;
-import java.util.Date;
 
 public class M3MeasureTime {
 

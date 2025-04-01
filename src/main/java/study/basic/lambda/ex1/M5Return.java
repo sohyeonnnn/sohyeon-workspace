@@ -1,7 +1,5 @@
 package study.basic.lambda.ex1;
 
-import study.basic.lambda.MyFunction;
-
 public class M5Return {
 
     public static MyFunction getOperation(String operator)

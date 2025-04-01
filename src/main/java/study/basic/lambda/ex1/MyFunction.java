@@ -1,4 +1,4 @@
-package study.basic.lambda;
+package study.basic.lambda.ex1;
 
 @FunctionalInterface
 public interface MyFunction {

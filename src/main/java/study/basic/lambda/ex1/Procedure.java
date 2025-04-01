@@ -1,4 +1,4 @@
-package study.basic.lambda;
+package study.basic.lambda.ex1;
 
 public interface Procedure {
     void run();
