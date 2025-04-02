@@ -1,4 +1,4 @@
-package study.basic.lambda.ex4;
+package study.basic.lambda.ex2;
 
 @FunctionalInterface
 public interface StringFunction {

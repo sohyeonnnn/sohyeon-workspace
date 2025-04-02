@@ -1,6 +1,5 @@
-package study.basic.lambda.ex3;
+package study.basic.lambda.ex2;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ReduceEx1 {

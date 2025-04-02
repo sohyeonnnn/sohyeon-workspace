@@ -1,15 +1,17 @@
-package study.basic.lambda.ex4;
+package study.basic.lambda.genericEx1;
+
+import java.util.function.Function;
 
 public class ReturnMethodEx1 {
 
-    public static StringFunction buildGreeter(String greeting){
+    public static Function<String, String> buildGreeter(String greeting){
         return str -> { return greeting + ", " + str;};
     }
 
     public static void main(String[] args) {
 
-        StringFunction HelloGreeter = buildGreeter("Hello");
-        StringFunction HiGreeter = buildGreeter("Hi");
+        Function<String, String> HelloGreeter = buildGreeter("Hello");
+        Function<String, String> HiGreeter = buildGreeter("Hi");
 
         System.out.println(HelloGreeter.apply("sohyeon"));
         System.out.println(HelloGreeter.apply("java"));

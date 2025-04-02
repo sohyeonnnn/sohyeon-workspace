@@ -1,4 +1,4 @@
-package study.basic.lambda.ex5;
+package study.basic.lambda.ex2;
 
 public class ComposeEx1 {
 
